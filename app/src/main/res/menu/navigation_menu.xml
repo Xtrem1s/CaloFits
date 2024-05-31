@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_drawer">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_persone"
+            android:title="Профиль"/>
+        <item
+            android:id="@+id/nav_base_of_food"
+            android:icon="@drawable/ic_food_bank"
+            android:title="База продуктов"/>
+        <item
+            android:id="@+id/nav_base_of_train"
+            android:icon="@drawable/ic_sports_bank"
+            android:title="База тренировок"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_setting"
+            android:title="Настройки"/>
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Выход" />
+
+
+    </group>
+</menu>

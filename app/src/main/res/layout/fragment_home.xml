@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/orange"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="65dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:selectedWeekBackgroundColor="#ff0000"
+                android:weekNumberColor="#0000ff"
+                android:weekSeparatorLineColor="#00ff00" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutHome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="350dp"
+                    android:layout_height="470dp"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                    <!--                    android:text="Тренировка:\n - Отжимания (15 повторений/4 подхода);\n - Приседания (20 повторений/4 подхода);\n - Бег (5 км)."-->
+
+                </ScrollView>
+
+<!--                <Space-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp" />-->
+
+<!--                <ScrollView-->
+<!--                    android:layout_width="350dp"-->
+<!--                    android:layout_height="200dp"-->
+<!--                    android:layout_gravity="center">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/textView5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:text="Прием пищи:\n - Бананы (ккал: 89, белки: 1.5г, жиры: 0.1г, углеводы: 21г);\n - Молоко (ккал: 133, белки: 7г, жиры: 6г, углеводы: 12г);\n - Яица (ккал: 158, белки: 12г, жиры: 11г, углеводы: 0.7г)."-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="20sp" />-->
+<!--                </ScrollView>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--        <dev.abhaycloud.infinitescrollablecalendarview.InfiniteScrollableCalendarView-->
+<!--            android:id="@+id/infiniteScrollableCalendarView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="128dp"-->
+<!--            app:normalDateBackground="@drawable/custom_background"-->
+<!--            app:normalDateTextColor="@color/white"-->
+<!--            app:normalDayTextColor="@color/white"-->
+<!--            app:selectedDateBackground="@drawable/custom_background"-->
+<!--            app:selectedDateTextColor="@color/white"-->
+<!--            app:selectedDayTextColor="@color/white"-->
+<!--            app:showTitle="false"-->
+<!--            app:specialDateBackground="@drawable/custom_background"-->
+<!--            app:specialDateTextColor="@color/white"-->
+<!--            app:specialDayTextColor="@color/white"-->
+<!--            app:startDate="2023-01-01" />-->
+    </LinearLayout>
+
+</FrameLayout>

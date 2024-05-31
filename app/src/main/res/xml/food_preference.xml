@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--below line is to create preference category-->
+    <!--    <PreferenceCategory android:title="General">-->
+
+    <!--in below line we are creating a list preference
+        and we are adding default selected value in list for 3 rd index-->
+    <!--dialog title is to set title for our dialog box
+        entries is used to add list of data which we
+        are adding from our strings file
+        entry values is to add values to our entries.
+        key is use to add key to our list preferences
+        summary is use to add description to our option
+        title is use to add title to our list preferences.-->
+    <!--this list preference is for remind me option-->
+    <EditTextPreference
+        android:dialogTitle="Введите наименование"
+        android:inputType="text"
+        android:key="name_food"
+        android:summary="Нажмите, чтобы ввести наименование пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Наименование" />
+
+    <EditTextPreference
+        android:dialogTitle="Введите описание"
+        android:inputType="text"
+        android:key="description_food"
+        android:summary="Нажмите, чтобы ввести описание пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Описание" />
+
+    <EditTextPreference
+        android:dialogTitle="Введите количество калорий"
+        android:inputType="numberDecimal"
+        android:key="calories_food"
+        android:summary="Нажмите, чтобы ввести количество калорий пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Калории" />
+    <EditTextPreference
+        android:dialogTitle="Введите количество белков"
+        android:inputType="numberDecimal"
+        android:key="proteins_food"
+        android:summary="Нажмите, чтобы ввести количество белков пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Белки" />
+
+    <EditTextPreference
+        android:dialogTitle="Введите количество жиров"
+        android:inputType="numberDecimal"
+        android:key="fats_food"
+        android:summary="Нажмите, чтобы ввести количество жиров пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Жиры" />
+    <EditTextPreference
+        android:dialogTitle="Введите количество углеводов"
+        android:inputType="numberDecimal"
+        android:key="carbohydrates_food"
+        android:summary="Нажмите, чтобы ввести количество углеводов пищи"
+        android:positiveButtonText="Ок"
+        android:negativeButtonText="Отмена"
+        android:title="Углеводы" />
+
+<!--    <MultiSelectListPreference-->
+<!--        android:dialogTitle="Выберите характеристики пищи"-->
+<!--        android:entries="@array/settings_list_preference_titles"-->
+<!--        android:entryValues="@array/settings_list_preference_titles"-->
+<!--        android:key="property_food"-->
+<!--        android:positiveButtonText="Ок"-->
+<!--        android:negativeButtonText="Отмена"-->
+<!--        android:title="Харатеристики упражнения" />-->
+
+    <!--    <ListPreference-->
+    <!--        android:defaultValue="3"-->
+    <!--        android:dialogTitle="@string/remind_to_take_a_break"-->
+    <!--        android:entries="@array/pref_remind_me_to_take_a_break"-->
+    <!--        android:entryValues="@array/pref_duration"-->
+    <!--        android:key="@string/key_upload_quality"-->
+    <!--        android:summary="@string/remind_me"-->
+    <!--        android:title="@string/remind_me" />-->
+
+    <!--on below line we are creating a switch preference
+        default value is use to set switch on or off
+        key is use to set key
+        title is use to add title to our switch-->
+    <!--this switch preference option is to remind for a bed time-->
+    <!--    <SwitchPreference-->
+    <!--        android:defaultValue="false"-->
+    <!--        android:key="@string/remind_me_for_bed_time"-->
+    <!--        android:title="@string/remind_for_bed_time" />-->
+
+    <!--    &lt;!&ndash;below switch preference is-->
+    <!--        use for mobile data usage&ndash;&gt;-->
+    <!--    <SwitchPreference-->
+    <!--        android:defaultValue="false"-->
+    <!--        android:key="@string/limit_data_usage"-->
+    <!--        android:summary="@string/stream_video"-->
+    <!--        android:title="@string/limit_mobile_usage" />-->
+
+    <!--    &lt;!&ndash;below list preference is use for-->
+    <!--        double tap to seek option&ndash;&gt;-->
+    <!--    <ListPreference-->
+    <!--        android:defaultValue="1"-->
+    <!--        android:dialogTitle="@string/double_tap_to_seek"-->
+    <!--        android:entries="@array/pref_seek_values"-->
+    <!--        android:entryValues="@array/pref_duration"-->
+    <!--        android:key="@string/pref_seek_val"-->
+    <!--        android:summary="@string/seconds"-->
+    <!--        android:title="@string/double_tap_to_seek" />-->
+
+    <!--    &lt;!&ndash;below option is use to create a list-->
+    <!--        preference for Upload preferences&ndash;&gt;-->
+    <!--    <ListPreference-->
+    <!--        android:defaultValue="1"-->
+    <!--        android:dialogTitle="@string/uploads"-->
+    <!--        android:entries="@array/pref_uploads"-->
+    <!--        android:entryValues="@array/pref_duration"-->
+    <!--        android:key="@string/pref_uploads"-->
+    <!--        android:summary="@string/specify_network_prefs"-->
+    <!--        android:title="Uploads" />-->
+
+    <!--    &lt;!&ndash;below switch preferences is use to restrict mode&ndash;&gt;-->
+    <!--    <SwitchPreference-->
+    <!--        android:defaultValue="false"-->
+    <!--        android:key="@string/prefs_restricted_mode"-->
+    <!--        android:summary="@string/restricted_mode"-->
+    <!--        android:title="@string/restricted_mode_description" />-->
+
+    <!--    &lt;!&ndash;below switch pref is use for enable stats option&ndash;&gt;-->
+    <!--    <SwitchPreference-->
+    <!--        android:defaultValue="false"-->
+    <!--        android:key="@string/prefs_enable_stats"-->
+    <!--        android:title="@string/enable_stats" />-->
+
+    <!--    </PreferenceCategory>-->
+
+</PreferenceScreen>

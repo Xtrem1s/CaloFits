@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "434843359720",
+    "project_id": "calofit-95af4",
+    "storage_bucket": "calofit-95af4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434843359720:android:b3bebb12ca59ddc1e16c5d",
+        "android_client_info": {
+          "package_name": "com.pirozhenko.calofits"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAedFExy5GROGS5wO8iAQ7f-ou21eWOAr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
