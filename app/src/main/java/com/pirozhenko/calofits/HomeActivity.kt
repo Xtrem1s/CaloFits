@@ -23,7 +23,6 @@ import com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
 class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var auth: FirebaseAuth
-//    private lateinit var t
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +57,7 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 3 -> {
                     replaceFragment(FoodMenuFragment())
-                    binding.toolbar.title = "Меню (Ккал: 349)"
+                    binding.toolbar.title = "Меню"
                 }
                 4 -> {
                     replaceFragment(StatisticsFragment())

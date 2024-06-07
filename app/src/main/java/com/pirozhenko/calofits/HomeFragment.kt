@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
     lateinit var calendar: CalendarView
     lateinit var button_date: Button
     lateinit var linearLayout: LinearLayout
-//    lateinit var scroll_view_1: Button
+
 
     lateinit var text_view: TextView
     lateinit var text_view_2: TextView

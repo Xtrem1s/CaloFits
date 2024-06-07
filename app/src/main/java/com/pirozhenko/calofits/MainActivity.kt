@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         var splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        auth = Firebase.auth
+
         hideSystemUI()
-        //Начало блока отвечающего за анимацию названия и градиента
+
         val splashScreenView = findViewById<ConstraintLayout>(R.id.splashScreenView)
         val drawable: AnimationDrawable = splashScreenView.background as AnimationDrawable
 

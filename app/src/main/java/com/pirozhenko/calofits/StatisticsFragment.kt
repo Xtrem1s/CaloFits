@@ -93,16 +93,16 @@ class StatisticsFragment : Fragment() {
         barDataSet.valueTextColor = Color.BLACK
         // on below line we are setting color for our bar data set
 //        barDataSet.setColor(resources.getColor(android.R.color.holo_purple))
-        barDataSet.setColors(Color.BLUE)
+        barDataSet.setColors(Color.RED)
         // on below line we are setting text size
         barDataSet.valueTextSize = 16f
 
         barDataSet2.valueTextColor = Color.BLACK
-        barDataSet2.setColors(Color.YELLOW)
+        barDataSet2.setColors(Color.WHITE)
         barDataSet2.valueTextSize = 16f
 
         barDataSet3.valueTextColor = Color.BLACK
-        barDataSet3.setColors(Color.GREEN)
+        barDataSet3.setColors(Color.YELLOW)
         barDataSet3.valueTextSize = 16f
 
         barDataSet4.valueTextColor = Color.BLACK
@@ -122,10 +122,10 @@ class StatisticsFragment : Fragment() {
 
         // on below line we are adding data
         // to our bar entries list
-        barEntriesList.add(BarEntry(1f, 349f))
-        barEntriesList2.add(BarEntry(2f, 17f))
-        barEntriesList3.add(BarEntry(3f, 15f))
-        barEntriesList4.add(BarEntry(4f, 36f))
+        barEntriesList.add(BarEntry(1f, 349f + 200f))
+        barEntriesList2.add(BarEntry(2f, 17f + 25f))
+        barEntriesList3.add(BarEntry(3f, 15f + 7f))
+        barEntriesList4.add(BarEntry(4f, 36f + 30f))
 
     }
     companion object {

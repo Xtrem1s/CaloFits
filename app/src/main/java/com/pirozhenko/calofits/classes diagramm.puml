@@ -1,0 +1,272 @@
+@startuml
+'https://plantuml.com/class-diagram
+class AddTrainActivity {
+    trainLW: ListView
+    searchView: SearchView
+    toolBarAddTrain: androidx.appcompat.widget.Toolbar
+    onCreate(savedInstanceState: Bundle?)
+}
+class BaseOfFoodActivity{
+    binding: ActivityBaseOfFoodBinding
+    foodLV : ListView
+    addBtn: View
+    removeBtn: ImageView
+    searchView: SearchView
+    foodList: ArrayList<FoodClass>
+    onCreate(savedInstanceState: Bundle?)
+    onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?)
+    onContextItemSelected(item: MenuItem): Boolean
+    onSupportNavigateUp(): Boolean
+}
+class BaseOfTrainActivity{
+    binding: ActivityBaseOfTrainBinding
+    trainLW: ListView
+    addBtn: View
+    removeBtn: ImageView
+    searchView: SearchView
+    trainList: ArrayList<ExerciseTrainClass>
+    onCreate(savedInstanceState: Bundle?)
+    onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?)
+    onContextItemSelected(item: MenuItem): Boolean
+    onSupportNavigateUp(): Boolean
+    }
+class CreateChangeFoodActivity{
+    toolbarCreateChangeFoodActivity: Toolbar
+    buttonSave: Button
+    buttonCancel: Button
+    newFood: FoodClass
+    addPreferenceToList(preference: Preference)
+    clearAllPreferenceValue()
+    onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)
+    onCreate(savedInstanceState: Bundle?)
+    bindPreferenceSummaryToValue(preference: Preference)
+}
+class CreateChangeTrainActivity{
+    toolbarCreateChangeTrainActivity: Toolbar
+    buttonSave: Button
+    buttonCancel: Button
+    newTrain: ExerciseTrainClass
+    onCreate(savedInstanceState: Bundle?)
+    bindPreferenceSummaryToValue(preference: Preference)
+    addPreferenceToList(preference: Preference)
+    clearAllPreferenceValue()
+    onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?)
+}
+class ExerciseTrainClass{
+    idExercise: Int = nextNewId
+    repetitions: Int? = null
+    approaches: Int? = null
+    distance: Int? = null
+    time: Int? = null
+    weight: Int? = null
+    picture: UiImageTrain? = null
+    toString(): String
+    equals(other: Any?): Boolean
+    hashCode(): Int
+
+}
+class FoodClass{
+    idFood: Int = nextNewId
+    picture: UiImageFood? = null
+    proteins: Float? = null
+    fats: Float? = null
+    carbohydrates: Float? = null
+    calories: Float? = null
+    toString(): String
+    equals(other: Any?): Boolean
+    hashCode(): Int
+
+}
+class FoodMenuFragment {
+ nutritionInfoText: TextView
+ expandableListView: ExpandableListView
+ adapter: SimpleExpandableListAdapter
+ mealPlan: MealPlanClass
+ onCreateView()
+ setupExpandableListView()
+ showAddMealDialog()
+ addNewGroup(mealName: String)
+ onActivityResult(requestCode: Int, resultCode: Int, data: Intent?)
+ updateMealWithProducts(mealName: String, selectedProducts: ArrayList<FoodClass>)
+}
+class ForgotPasswordActivity{
+    auth: FirebaseAuth
+    binding: ActivityForgotPasswordBinding
+    onCreate(savedInstanceState: Bundle?)
+    checkEmail():Boolean
+}
+class HomeActivity{
+    binding: ActivityHomeBinding
+    auth: FirebaseAuth
+    onCreate(savedInstanceState: Bundle?)
+    replaceFragment(fragment: Fragment)
+    onNavigationItemSelected(item: MenuItem): Boolean
+
+}
+class HomeFragment{
+    calendar: CalendarView
+    button_date: Button
+    linearLayout: LinearLayout
+    onCreate(savedInstanceState: Bundle?)
+    onCreateView
+    onViewCreated(view: View, savedInstanceState: Bundle?)
+
+}
+class MainActivity{
+    onCreate(savedInstanceState: Bundle?)
+}
+class MealPlanClass{
+    mealName: String
+    foodItems: ArrayList<FoodClass>
+    totalCalories: Float
+    totalProteins: Float
+    totalFats: Float
+    totalCarbohydrates: Float
+    addFoodItem(food: FoodClass)
+    removeFoodItem(food: FoodClass)
+    calculateNutrition()
+    toString(): String
+}
+class ProfileActivity{
+    nameEditText: EditText
+    heightEditText: EditText
+    weightEditText: EditText
+    ageEditText: EditText
+    goalRadioGroup: RadioGroup
+    loseWeightRadioButton: RadioButton
+    gainWeightRadioButton: RadioButton
+    saveButton: Button
+    auth: FirebaseAuth
+    binding: ActivityProfileBinding
+    onCreate(savedInstanceState: Bundle?)
+    onSupportNavigateUp(): Boolean
+}
+class SettingActivity{
+    auth: FirebaseAuth
+    binding: ActivitySettingsBinding
+    onCreate(savedInstanceState: Bundle?)
+    onSupportNavigateUp(): Boolean
+    checkPasswordField(): Boolean
+
+}
+class SignInActivity{
+    auth: FirebaseAuth
+    binding: ActivitySignInBinding
+    onCreate(savedInstanceState: Bundle?)
+    checkAllField(): Boolean
+}
+class SignUpActivity{
+    auth: FirebaseAuth
+    binding: ActivitySignUpBinding
+    onCreate(savedInstanceState: Bundle?)
+    checkAllField(): Boolean
+}
+class SportActivity{
+    addBtn: View
+    trainLW: ListView
+    searchView: SearchView
+
+    backBtn: ImageView
+    removeBtn: ImageView
+    saveTrain: Button
+    toolbarSportActivity: Toolbar
+
+    onCreate(savedInstanceState: Bundle?)
+}
+class StartTrainFragment{
+    addBtn: Button
+    onCreate(savedInstanceState: Bundle?)
+    onCreateView
+    onViewCreated(view: View, savedInstanceState: Bundle?)
+}
+class StatisticsFragment{
+    barChart: BarChart
+    barData: BarData
+    barDataSet: BarDataSet
+    barDataSet2: BarDataSet
+    barDataSet3: BarDataSet
+    barDataSet4: BarDataSet
+    barEntriesList: ArrayList<BarEntry>
+    barEntriesList2: ArrayList<BarEntry>
+    barEntriesList3: ArrayList<BarEntry>
+    barEntriesList4: ArrayList<BarEntry>
+    onCreate(savedInstanceState: Bundle?)
+    onCreateView
+    onViewCreated(view: View, savedInstanceState: Bundle?)
+    getBarChartData()
+}
+class TrainClass{
+    exercisesList2: ArrayList<ExerciseTrainClass> = ArrayList()
+    exercisesList: HashMap<ExerciseTrainClass,PropertyTrain> = HashMap()
+    }
+class AddFoodActivity {
+    binding: ActivityBaseOfFoodBinding
+    foodLV: ListView
+    searchView: SearchView
+    foodList: ArrayList<FoodClass>
+    override fun onCreate(savedInstanceState: Bundle?)
+    setSupportActionBar(toolbar: Toolbar?)
+    onQueryTextSubmit(query: String?)
+    onQueryTextChange(newText: String?)
+    onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long)
+    onSupportNavigateUp(): Boolean
+
+}
+
+MainActivity --> SignInActivity
+SignInActivity --> SignUpActivity
+SignUpActivity --> SignInActivity
+SignInActivity --> ForgotPasswordActivity
+SignInActivity --> HomeActivity
+ForgotPasswordActivity --> SignInActivity
+MainActivity --> HomeActivity
+HomeActivity --> HomeFragment
+HomeActivity --> StartTrainFragment
+HomeActivity --> FoodMenuFragment
+HomeActivity --> StatisticsFragment
+HomeActivity --> SettingActivity
+HomeActivity --> ProfileActivity
+HomeActivity --> BaseOfFoodActivity
+HomeActivity --> BaseOfTrainActivity
+StartTrainFragment --> SportActivity
+SportActivity ---> AddTrainActivity
+AddTrainActivity <--ExerciseTrainClass
+SportActivity <--TrainClass
+FoodMenuFragment --> AddFoodActivity
+AddFoodActivity <-- FoodClass
+FoodMenuFragment <-- MealPlanClass
+BaseOfFoodActivity --> CreateChangeFoodActivity
+BaseOfFoodActivity <-- FoodClass
+BaseOfTrainActivity --> CreateChangeTrainActivity
+BaseOfTrainActivity <-- TrainClass
+
+
+
+
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+'
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+@enduml
